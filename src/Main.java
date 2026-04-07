@@ -9,7 +9,7 @@ void main() {
 
         switch (opcaoEscolhida) {
             case 1:
-                //mimijmi
+                //
                 break;
             case 2:
                 //
