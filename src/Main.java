@@ -2,9 +2,26 @@
 void main() {
     ArrayList<Cliente> clientes = new ArrayList<>();
 
-    boolean de
+    boolean desejaSair = false;
+
+    while (!desejaSair) {
+        int opcaoEscolhida = menu();
+
+        switch (opcaoEscolhida) {
+            case 1:
+                //
+                break;
+            case 2:
+                //
+                break;
+            case 5:
+                desejaSair = true;
+        }
+
+        }
+    }
     int opcaoEscolhida = menu();
-}
+
 
 public int menu() {
     System.out.println("Digite uma das opções abaixo: ");
