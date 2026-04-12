@@ -69,12 +69,12 @@ public void removerCliente(ArrayList<Cliente> clientes) {
 
 public void editarCliente(ArrayList<Cliente> clientes){
 
-        String cpf = IO.readln("Informe o CPF do cliente que deseja editar: ");
+    String cpf = IO.readln("Informe o CPF do cliente que deseja editar: ");
 
-        boolean encontrouCliente = false;
+    boolean encontrouCliente = false;
 
-        for (int i = 0; i < clientes.size(); i++) {
-            Cliente cliente = clientes.get(i);
+    for (int i = 0; i < clientes.size(); i++) {
+        Cliente cliente = clientes.get(i);
             if (cliente.cpf.equals(cpf)) {
                 encontrouCliente = true;
 
@@ -88,8 +88,8 @@ public void editarCliente(ArrayList<Cliente> clientes){
             }
         }
 
-        if (!encontrouCliente) {
-            System.out.println("Cliente não encontrado!");
+    if (!encontrouCliente) {
+        System.out.println("Cliente não encontrado!");
         }
     }
 
