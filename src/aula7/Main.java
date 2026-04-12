@@ -18,6 +18,9 @@ void main() {
             case 3:
                 removerCliente(clientes);
                 break;
+            case 4:
+                editarCliente(clientes);
+                break;
             case 5:
                 desejaSair = true;
         }
@@ -45,11 +48,54 @@ public void listarClientes(ArrayList<Cliente> clientes) {
 }
 
 public void removerCliente(ArrayList<Cliente> clientes) {
+
+    String cpf = IO.readln("Informe o cpf do cliente: ");
+
+    boolean encontrouCliente = false;
     for (int i = 0; i < clientes.size(); i++) {
-
-
+        if (clientes.get(i).cpf.equals(cpf)) {
+            clientes.remove(i);
+            encontrouCliente = true;
+        }
     }
+
+    if (!encontrouCliente) {
+        System.out.println("Cliente não enconntrado");
+    } else {
+        System.out.println("Cliente removido com sucesso!");
+    }
+
 }
+
+public void editarCliente(ArrayList<Cliente> clientes){
+
+        String cpf = IO.readln("Informe o CPF do cliente que deseja editar: ");
+
+        boolean encontrouCliente = false;
+
+        for (int i = 0; i < clientes.size(); i++) {
+            Cliente cliente = clientes.get(i);
+            if (cliente.cpf.equals(cpf)) {
+                encontrouCliente = true;
+
+                System.out.println("Cliente encontrado: " + cliente);
+                String novoNome = IO.readln("Digite o novo nome: ");
+                String novoCpf = IO.readln("Digite o novo CPF: ");
+                cliente.nome = novoNome;
+                cliente.cpf = novoCpf;
+                System.out.println("Cliente atualizado com sucesso!");
+                break;
+            }
+        }
+
+        if (!encontrouCliente) {
+            System.out.println("Cliente não encontrado!");
+        }
+    }
+
+
+
+
 public int menu() {
     System.out.println("Digite uma das opções abaixo: ");
     System.out.println("1 = Adicionar novo cliente");
