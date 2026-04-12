@@ -75,16 +75,16 @@ public void editarCliente(ArrayList<Cliente> clientes){
 
     for (int i = 0; i < clientes.size(); i++) {
         Cliente cliente = clientes.get(i);
-            if (cliente.cpf.equals(cpf)) {
-                encontrouCliente = true;
+        if (cliente.cpf.equals(cpf)) {
+            encontrouCliente = true;
 
-                System.out.println("Cliente encontrado: " + cliente);
-                String novoNome = IO.readln("Digite o novo nome: ");
-                String novoCpf = IO.readln("Digite o novo CPF: ");
-                cliente.nome = novoNome;
-                cliente.cpf = novoCpf;
-                System.out.println("Cliente atualizado com sucesso!");
-                break;
+            System.out.println("Cliente encontrado: " + cliente);
+            String novoNome = IO.readln("Digite o novo nome: ");
+            String novoCpf = IO.readln("Digite o novo CPF: ");
+            cliente.nome = novoNome;
+            cliente.cpf = novoCpf;
+            System.out.println("Cliente atualizado com sucesso!");
+            break;
             }
         }
 
@@ -92,8 +92,6 @@ public void editarCliente(ArrayList<Cliente> clientes){
         System.out.println("Cliente não encontrado!");
         }
     }
-
-
 
 
 public int menu() {
